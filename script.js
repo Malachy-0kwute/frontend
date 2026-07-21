@@ -1,7 +1,7 @@
 // define event listener that is triggered when the DOM is fully loaded upon visiting the website.
 document.addEventListener('DOMContentLoaded', async function() {
-  // const response = await fetch('http://localhost:3000/api/songs');
-  const response = await fetch('https://backend-wtdo.onrender.com/api/songs');
+  const response = await fetch('http://localhost:3000/api/songs'); // polling data from db on cloud (mongoDB)
+  // const response = await fetch('https://backend-wtdo.onrender.com/api/songs'); // polling data from a server hosting backend.
   const songs = await response.json();
 
   let html = '';
